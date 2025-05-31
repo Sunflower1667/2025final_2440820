@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>교사용 진로 상담 내역 조회</title>
+  <link rel="stylesheet" href="page2.css" />
+  <script type="module" src="page2.js" defer></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h2>교사용 진로 상담 내역 조회</h2>
+
+    <input type="password" id="password" placeholder="교사 암호 입력" />
+    <button id="checkBtn">확인</button>
+
+    <!-- 🔐 암호 인증 후에만 표시 -->
+    <div id="log-section" style="display:none; margin-top:20px;">
+
+      <!-- 🔍 검색 입력창 및 버튼 -->
+      <div style="text-align: right; margin-bottom: 10px;">
+        <input type="text" id="searchInput" placeholder="이름 또는 학번으로 검색" />
+        <button id="searchBtn">검색</button>
+      </div>
+
+      <!-- 상담 내역 테이블 -->
+      <table>
+        <thead>
+          <tr>
+            <th>날짜</th>
+            <th>시간</th>
+            <th>이름</th>
+            <th>학번</th>
+            <th>상담 내용</th>
+            <th>교사 메모</th>
+          </tr>
+        </thead>
+        <tbody id="logTableBody"></tbody>
+      </table>
+
+      <!-- 다운로드, 초기화 버튼 -->
+      <div style="text-align: right; margin-top: 15px;">
+        <button id="resetBtn" class="danger">초기화</button>
+        <button id="downloadBtn">CSV 다운로드</button>
+      </div>
+
+      <!-- 첫 페이지로 이동 버튼 -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button id="goHomeBtn">첫 페이지로</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

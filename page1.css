@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #fff8dc, #e0f7fa);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.student-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.student-info input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  background-color: #daf9ff;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 50px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  
+}
+
+button {
+  background-color: #ffd54f;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb300;
+}
+
+.chat-message {
+  max-width: 70%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  line-height: 1.4;
+  position: relative;
+  clear: both;
+}
+
+/* 사용자 메시지: 오른쪽 말풍선 */
+.chat-message.user {
+  background-color: #d0f0ff;
+  float: right;
+  text-align: left;
+  border-bottom-right-radius: 0;
+}
+
+.chat-message.user::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #d0f0ff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* 챗봇 메시지: 왼쪽 말풍선 */
+.chat-message.bot {
+  background-color: #ffe4e1;
+  float: left;
+  text-align: left;
+  border-bottom-left-radius: 0;
+  font-style: italic;
+}
+
+.chat-message.bot::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #ffe4e1;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.end-button {
+  margin-top: 10px;
+  background-color: #e57373;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.end-button:hover {
+  background-color: #d32f2f;
+}
+
+.input-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-row textarea {
+  flex: 1;
+  margin-bottom: 0; /* 기존 margin-bottom 제거 */
+}
+
+.input-row button {
+  padding: 10px 20px;        /* 세로, 가로 여백 */
+  font-size: 16px;           /* 글자 크기 동일 */
+  border-radius: 5px;        /* 둥근 테두리 */
+  height: 100%;              /* textarea 높이와 맞춤 */
+  background-color: #99fac4;
+  border: none;
+  cursor: pointer;
+}
+
+.input-row button:hover {
+  background-color: #99fac4;
+}
